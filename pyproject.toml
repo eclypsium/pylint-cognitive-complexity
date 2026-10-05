@@ -1,0 +1,25 @@
+[project]
+name = "pylint-cognitive-complexity"
+version = "0.1.0"
+description = "Pylint plugin that reports functions with high cognitive complexity"
+readme = "README.md"
+authors = [
+    { name = "Daniel Gutson", email = "daniel.gutson@eclypsium.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "pylint>=4.1.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.26,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "radon>=6.0.1",
+]
+
+[tool.pylint.main]
+load-plugins = ["pylint_cognitive_complexity"]
