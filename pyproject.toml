@@ -1,6 +1,6 @@
 [project]
 name = "pylint-cognitive-complexity"
-version = "0.1.0"
+version = "0.1.1"
 description = "Pylint plugin that reports functions with high cognitive complexity"
 readme = "README.md"
 authors = [
