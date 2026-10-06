@@ -7,9 +7,16 @@ authors = [
     { name = "Daniel Gutson", email = "daniel.gutson@eclypsium.com" }
 ]
 requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
 dependencies = [
     "pylint>=4.1.1",
 ]
+
+[project.urls]
+Homepage = "https://github.com/eclypsium/pylint-cognitive-complexity"
+Repository = "https://github.com/eclypsium/pylint-cognitive-complexity"
+Issues = "https://github.com/eclypsium/pylint-cognitive-complexity/issues"
 
 [build-system]
 requires = ["uv_build>=0.9.26,<0.10.0"]
