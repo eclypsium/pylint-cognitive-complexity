@@ -4,12 +4,28 @@ A pylint plugin that reports functions and methods whose
 [cognitive complexity](https://www.sonarsource.com/docs/CognitiveComplexity.pdf)
 is above a configurable maximum.
 
-## Install
+## Installation
 
-Install it into the environment that runs pylint, for example:
+Requires Python 3.10+ and pylint 4.1.1+.
+
+With pip:
+
+```bash
+pip install pylint-cognitive-complexity
+```
+
+With uv, as a dev dependency of the project that runs pylint:
 
 ```bash
 uv add --dev pylint-cognitive-complexity
+```
+
+Or from a checkout:
+
+```bash
+git clone https://github.com/eclypsium/pylint-cognitive-complexity.git
+cd pylint-cognitive-complexity
+pip install -e .        # or: uv pip install -e .
 ```
 
 ## Usage
