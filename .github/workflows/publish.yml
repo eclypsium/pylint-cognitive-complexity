@@ -1,0 +1,33 @@
+name: Publish
+
+# Tag v* -> PyPI over Trusted Publishing (OIDC): no API token is stored anywhere.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  pypi:
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: astral-sh/setup-uv@v6
+
+      - name: Tests
+        run: uv run pytest -q
+
+      # The checker has to pass on its own source.
+      - name: Dogfooding
+        run: uv run pylint src
+
+      - name: Build sdist and wheel
+        run: uv build
+
+      - name: Publish
+        run: uv publish

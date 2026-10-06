@@ -9,7 +9,7 @@ is above a configurable maximum.
 Install it into the environment that runs pylint, for example:
 
 ```bash
-uv add --dev git+https://github.com/eclypsium/pylint-cognitive-complexity
+uv add --dev pylint-cognitive-complexity
 ```
 
 ## Usage
